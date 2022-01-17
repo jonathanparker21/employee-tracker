@@ -20,4 +20,4 @@ VALUES ("Jane", "Doe", 1, NULL),
        ("Willow", "Smith", 4, NULL),
        ("Jennifer", "Hudson", 5, NULL),
        ("Michael", "Cane", 6, NULL),
-       ("Carrie", "Bradshaw", 7, NULL),
+       ("Arnold", "Palmer", 7, NULL);
