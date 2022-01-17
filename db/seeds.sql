@@ -1,15 +1,23 @@
 INSERT INTO department (name)
-VALUES ("Web Development"),
-       ("Data Science"),
-       ("Math"),
-       ("Electives");
+VALUES ("Sales"),
+       ("Engineering"),
+       ("Finance"),
+       ("Legal");
 
-INSERT INTO course_names (name, department)
-VALUES ("Intro to JavaScript", 1),
-       ("Data Science", 2),
-       ("Linear Algebra", 3),
-       ("History of the Internet", 4),
-       ("Machine Learning", 4),
-       ("Game Design", 1 ),
-       ("Cloud Development", 1);
+INSERT INTO role (title, salary, department_id)
+VALUES ("Salesperson", 80000, 1),
+       ("Lead Engineer", 150000, 2),
+       ("Software Engineer", 120000, 2),
+       ("Account Manager", 160000, 3),
+       ("Accountant", 125000, 3),
+       ("Legal Team Lead", 250000, 4),
+       ("Lawyer", 190000, 4);
        
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("Jane", "Doe", 1, NULL),
+       ("John", "Doe", 2, NULL),
+       ("Peter", "Parker", 3, NULL),
+       ("Willow", "Smith", 4, NULL),
+       ("Jennifer", "Hudson", 5, NULL),
+       ("Michael", "Cane", 6, NULL),
+       ("Carrie", "Bradshaw", 7, NULL),
