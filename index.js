@@ -8,6 +8,7 @@ connection.connect(function (err) {
     displayEmployees()
 });
 
+// this function displays all employees
 function displayEmployees() {
 
     inquirer.prompt({
@@ -70,6 +71,7 @@ function allEmployees() {
 
 };
 
+// this function adds a department to the db
 function addDepartment() {
 
     inquirer.prompt({
@@ -187,6 +189,7 @@ function addEmployee() {
 
 };
 
+// this function allows user to update an employees role using that employee's id
 function updateRole() {
 
     var updateRoleQuestions = [
