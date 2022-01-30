@@ -192,10 +192,9 @@ function updateRole() {
     var updateRoleQuestions = [
         {
 
-            type: 'list',
-            name: 'whichRole',
-            message: "Which employee's role would you like to update?",
-            choices: ['SELECT first_name, last_name FROM employee']
+            type: 'input',
+            name: 'whichEmployee',
+            message: "Enter the employee's id that needs their role updated."
 
         },
         {
@@ -209,11 +208,8 @@ function updateRole() {
 
     inquirer.prompt(updateRoleQuestions)
         .then((response) => {
-            connection.query('UPDATE employee SET ?;',
-                {
-                    id: response.whichRole,
-                    role_id: response.newRole,
-                },
+            connection.query('UPDATE employee SET role_id = ? WHERE id = ?',
+                [response.newRole, response.whichEmployee],
                 function (err, result) {
                     if (err) { console.log(err) }
                     console.table(result)
